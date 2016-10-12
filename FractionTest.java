@@ -43,16 +43,17 @@ public class FractionTest{
 
       //Prints Mixed Fractions and tests 0 denominator
       System.out.println("Mixed Fraction 1 is " + m1.toString());
-      System.out.println("Mixed Fraction 1 is " + m2.toString());
-      System.out.println("Mixed Fraction 1 is " + m3.toString());
-      System.out.println("Mixed Fraction 1 is " + m4.toString());
+      System.out.println("Mixed Fraction 2 is " + m2.toString());
+      System.out.println("Mixed Fraction 3 is " + m3.toString());
+      System.out.println("Mixed Fraction 4 is " + m4.toString());
       //Tests Mixed Fraction conversion
+      System.out.println(m1.toString() + " is " + m1.getFraction().toString());
       System.out.println(m2.toString() + " is " + mf.toString());
       //Tests arthimetic operators
-      System.out.println("Mixed Fraction 1 + Mixed Fraction 2 is " + m1.add(m2).toString());
-      System.out.println("Mixed Fraction 1 - Mixed Fraction 2 is " + m1.subtract(m2).toString());
-      System.out.println("Mixed Fraction 1 * Mixed Fraction 2 is " + m1.multiply(m2).toString());
-      System.out.println("Mixed Fraction 1 / Mixed Fraction 2 is " + m1.divide(m2).toString());
+      System.out.println("Mixed Fraction 1 + Mixed Fraction 1 is " + m1.add(m1).toString());
+      System.out.println("Mixed Fraction 1 - Mixed Fraction 1 is " + m1.subtract(m1).toString());
+      System.out.println("Mixed Fraction 1 * Mixed Fraction 1 is " + m1.multiply(m1).toString());
+      System.out.println("Mixed Fraction 1 / Mixed Fraction 1 is " + m1.divide(m1).toString());
       //Tests relational operators
       System.out.println("Mixed Fraction 1 and 2 " + m1.compareTo(m2));
       System.out.println("Mixed Fraction 1 and 4 " + m1.compareTo(m4));

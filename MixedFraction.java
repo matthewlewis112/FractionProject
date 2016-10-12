@@ -12,7 +12,10 @@ public class MixedFraction extends Fraction {
     //Converts mixed fraction into normal fraction
     public Fraction getFraction(){
       Fraction newFraction = new Fraction(1,1);
-      newFraction.setNumerator((wholeNumber*this.getDenominator())+this.getNumerator());
+      if (!(this.getNumerator()==1))
+        newFraction.setNumerator((wholeNumber*this.getDenominator())+this.getNumerator());
+      else
+        newFraction.setNumerator(wholeNumber);
       newFraction.setDenominator(this.getDenominator());
       return newFraction;
     }
@@ -86,6 +89,8 @@ public class MixedFraction extends Fraction {
       int tNumerator;
       wholeNumber = n/d;
       tNumerator = n%d;
+      if (tNumerator == d)
+        wholeNumber -= 1;
       this.setNumerator(tNumerator);
       this.setDenominator(d);
     }
