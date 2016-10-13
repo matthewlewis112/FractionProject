@@ -79,17 +79,8 @@ public class Fraction {
     }
     public Fraction subtract(Fraction f2){
       //Numerator and Denominator of the first fraction
-      int n1 = numerator;
-      int d1 = denominator;
-      //Numerator and Denominator of the second fraction
-      int n2 = f2.getNumerator();
-      int d2 = f2.getDenominator();
-      //Numerator and Denominator of the fraction returned
-      int nf = (n1*d2) - (n2+d1);
-      int df = (d1*d2);
-      nf /= this.gcd(d1, d2);
-      df /= this.gcd(d1, d2);
-      return new Fraction(nf,df);
+      int n = f2.getNumerator() * -1;
+      return this.add(new Fraction(n,f2.getDenominator()));
     }
     public Fraction multiply(Fraction f2){
       int nf = numerator * f2.getNumerator();
@@ -141,5 +132,9 @@ public class Fraction {
     Fraction(int n, int d){
       setNumerator(n);
       setDenominator(d);
+    }
+    Fraction(Fraction f){
+      setNumerator(f.getNumerator());
+      setDenominator(f.getDenominator());
     }
 }
